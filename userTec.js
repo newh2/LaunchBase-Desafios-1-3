@@ -6,14 +6,6 @@ const usuarios = [
   { nome: 'Fabin', tecnologias: ['AngularJs', 'Node.js'] },
 ];
 
-for (let i = 0; i < usuarios.length; i++) {
-  let tecnologias = '';
-  for (let a = 0; a < usuarios[i].tecnologias.length; a++) {
-    if (a == 0) {
-      tecnologias = usuarios[i].tecnologias[a];
-    } else {
-      tecnologias = tecnologias + ', ' + usuarios[i].tecnologias[a];
-    }
-  }
-  console.log(`${usuarios[i].nome} trabalha com ${tecnologias}`);
+for (usuario of usuarios) {
+  console.log(`${usuario.nome} trabalha com ${usuario.tecnologias.join(', ')}`);
 }
